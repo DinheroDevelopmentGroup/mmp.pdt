@@ -3,9 +3,8 @@ import type { Packet } from '../../util/packet.js';
 import type { AsyncVoid } from '../../util/types.js';
 import proxy from '../internal.proxy/local.js';
 
-interface PartialPlayer {
+export interface PartialPlayer {
   uuid: string;
-  // TODO: properties
   player?: {
     name: string;
     properties: { key: string; value: string; signature: string }[];
@@ -27,7 +26,7 @@ interface DownstreamPlayerRemovePacketData {
   players: string[];
 }
 
-interface EventMap {
+export interface EventMap {
   /**
    * @param delta reference to the packet's delta, changes will be reflected on client
    */
